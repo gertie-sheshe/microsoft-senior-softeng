@@ -11,6 +11,7 @@ const isSymmetric = (root) => {
 
     if (leftNode.val !== rightNode.val) return false;
 
+    // Only when the values are identical do we continue to dfs
     return (
       traverse(leftNode.left, rightNode.right) &&
       traverse(leftNode.right, rightNode.left)
